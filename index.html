@@ -4,69 +4,188 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Solla Productions</title>
+  <meta name="description" content="Solla Productions publishes clean, well documented Unity environments and tools. HD Rundown Business Complex and more.">
+  <link rel="icon" href="images/icon.png">
   <style>
-    :root { color-scheme: dark; }
+    :root {
+      --bg: #0b0c10;
+      --panel: #14161c;
+      --ink: #f3f1ec;
+      --muted: #a9a59c;
+      --line: rgba(255,255,255,.08);
+      --built: #3a3f4a;
+      --urp: #2f5ea8;
+      --hdrp: #7a3db5;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
     body {
-      margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      background: #111318;
-      color: #e8e6e1;
-      line-height: 1.55;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif;
+      line-height: 1.5;
     }
-    header, main, footer {
-      max-width: 42rem;
-      margin: 0 auto;
-      padding: 0 1.25rem;
+    a { color: inherit; }
+    img { max-width: 100%; display: block; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 22px 0;
     }
-    header { padding-top: 4rem; padding-bottom: 1.5rem; }
-    h1 {
-      font-size: 2rem;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-      margin: 0 0 0.35rem;
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .brand img {
+      width: 44px; height: 44px; border-radius: 50%;
+      object-fit: cover; border: 1px solid var(--line);
     }
-    .tag {
-      color: #b7b3aa;
-      font-family: system-ui, sans-serif;
-      font-size: 0.95rem;
+    .brand strong { display: block; font-size: 13px; letter-spacing: .18em; }
+    .brand span { display: block; font-size: 11px; color: var(--muted); letter-spacing: .12em; text-transform: uppercase; }
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
     }
-    h2 {
-      font-size: 1.15rem;
-      margin: 2.25rem 0 0.6rem;
-      font-weight: 600;
+    .hero {
+      position: relative;
+      border: 1px solid var(--line);
+      overflow: hidden;
+      background: #101217;
     }
-    p, li { color: #d5d2cc; }
-    a { color: #d7c4a3; }
-    ul { padding-left: 1.2rem; }
+    .hero img { width: 100%; height: auto; }
+    section { padding: 72px 0; }
+    .kicker {
+      font-size: 11px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 10px;
+    }
+    h1, h2 { margin: 0 0 16px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+    h1 { font-size: clamp(28px, 5vw, 52px); line-height: 1.05; }
+    h2 { font-size: 22px; }
+    p { color: #d7d3cc; max-width: 62ch; }
+    .grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 28px;
+      align-items: start;
+    }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      padding: 22px;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 22px 0;
+    }
+    .stat { border: 1px solid var(--line); padding: 14px 16px; background: #101217; }
+    .stat b { display: block; font-size: 22px; }
+    .stat span { color: var(--muted); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+    .pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 0; }
+    .pill {
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: white;
+    }
+    .built { background: var(--built); }
+    .urp { background: var(--urp); }
+    .hdrp { background: var(--hdrp); }
+    .shots { display: grid; grid-template-columns: 1fr; gap: 12px; }
+    .shots img { width: 100%; border: 1px solid var(--line); }
     footer {
-      padding: 3rem 1.25rem 4rem;
-      color: #8e8a82;
-      font-family: system-ui, sans-serif;
-      font-size: 0.85rem;
+      border-top: 1px solid var(--line);
+      padding: 28px 0 48px;
+      color: var(--muted);
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .mail { color: var(--ink); }
+    @media (max-width: 800px) {
+      .grid { grid-template-columns: 1fr; }
+      header { align-items: flex-start; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Solla Productions</h1>
-    <p class="tag">Unity assets for real projects</p>
-  </header>
-  <main>
-    <h2>About</h2>
-    <p>Solla Productions is a small Florida studio. We ship clean, well documented Unity assets: environments, tools, and C# systems meant to drop into a professional pipeline.</p>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#top">
+        <img src="images/logo.jpg" alt="Solla Productions">
+        <span>
+          <strong>SOLLA PRODUCTIONS</strong>
+          <span>Unity environments</span>
+        </span>
+      </a>
+      <nav><a href="#contact">Contact</a></nav>
+    </header>
+  </div>
 
-    <h2>Work</h2>
-    <p><strong>HD Rundown Business Complex (Full Interior + Exterior)</strong></p>
-    <p>A photoreal three-storey abandoned office, fully assembled, with interior and exterior, furniture, props, and scripted doors. Built-in, URP, and HDRP installers are included, along with a PDF manual and a playable demo.</p>
-    <ul>
-      <li>184 FBX files, 724,247 triangles across the set</li>
-      <li>PBR materials, baked lighting, and 16 scripted door hinges</li>
-      <li>4 LODs on the main building shell</li>
-    </ul>
+  <div class="wrap" id="top">
+    <div class="hero">
+      <img src="images/cover.jpg" alt="HD Rundown Business Complex, modular three-storey urban environment">
+    </div>
+  </div>
 
-    <h2 id="contact">Contact</h2>
-    <p>Support and business: <a href="mailto:sxnorthrop15@gmail.com">sxnorthrop15@gmail.com</a></p>
-  </main>
-  <footer>Solla Productions</footer>
+  <section>
+    <div class="wrap">
+      <p class="kicker">Studio</p>
+      <h1>Clean assets.<br>Documented. Ready.</h1>
+      <p>Solla Productions is a small Florida studio. We ship Unity environments and tools meant to drop into a professional pipeline: complete scenes, individual prefabs, and a manual you can actually follow.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap grid">
+      <div>
+        <p class="kicker">Featured work</p>
+        <h2>HD Rundown Business Complex</h2>
+        <p>A photoreal three-storey abandoned office, interior and exterior, fully assembled. Furniture, props, warehouse clutter, and 16 scripted doors. Separate Built-in, URP, and HDRP installers with baked lighting and a playable demo.</p>
+        <div class="stats">
+          <div class="stat"><b>184</b><span>FBX models</span></div>
+          <div class="stat"><b>181</b><span>Prefabs</span></div>
+          <div class="stat"><b>724k</b><span>Triangles</span></div>
+          <div class="stat"><b>4</b><span>LODs on the shell</span></div>
+        </div>
+        <div class="pills">
+          <span class="pill built">Built-in</span>
+          <span class="pill urp">URP</span>
+          <span class="pill hdrp">HDRP</span>
+        </div>
+      </div>
+      <div class="shots">
+        <img src="images/social.png" alt="Rundown Business Complex exterior with 184 models and 181 prefabs">
+        <img src="images/card.jpg" alt="Rundown Business Complex card render">
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="panel">
+        <p class="kicker">Contact</p>
+        <h2>Support and business</h2>
+        <p>Questions about setup, pipelines, or a package: write to <a class="mail" href="mailto:sxnorthrop15@gmail.com">sxnorthrop15@gmail.com</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <footer>
+      <span>Solla Productions</span>
+      <span>Florida, United States</span>
+    </footer>
+  </div>
 </body>
 </html>
