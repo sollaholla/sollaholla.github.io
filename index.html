@@ -77,15 +77,15 @@
       <div class="wrap hero-inner">
         <p class="margin-note reveal"><span class="monogram" aria-hidden="true">S.N.</span><span>Soloman Northrop</span><span>Lead Software Engineer</span><span>St. Petersburg, Florida</span><span>Remote</span></p>
         <div class="hero-copy">
-          <h1 id="hero-title" class="reveal">Software I wrote is patrolling a car dealership, running physical therapy on Meta Quest, and driving AI coding agents on developers' desks.</h1>
-          <p class="lede reveal">Seven years. Only software engineer at Robocor, first developer at VEERA Medical. Robocor 2.0 is on the Guardian robot patrolling Nimnicht Chevrolet. MedXR is in 15+ clinics on Meta Quest. Solla Code is my fork of T3 Code for running several coding agents at once.</p>
+          <h1 id="hero-title" class="reveal">Software I wrote patrols a car dealership, runs physical therapy on Meta Quest, and drives AI coding agents.</h1>
+          <p class="lede reveal">I have been a software engineer for seven years, the only one at Robocor and the first at VEERA Medical. Robocor 2.0 is on the Guardian robot patrolling Nimnicht Chevrolet. MedXR is in 15+ clinics on Meta Quest. Solla Code is my fork of T3 Code for running several coding agents at once.</p>
           <p class="links reveal">
             <a class="primary" href="resume/Soloman_Northrop_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
             <a href="https://github.com/sollaholla" target="_blank" rel="noopener">GitHub</a>
             <a href="https://www.linkedin.com/in/soloman-northrop-376420129" target="_blank" rel="noopener">LinkedIn</a>
             <a href="#work">Work</a>
           </p>
-          <p class="now reveal"><b>Now</b> Robocor 2.0 in production at Nimnicht Chevrolet. Solla Code nightly builds. Looking for a remote senior or lead role, US.<span class="live" id="live"></span></p>
+          <p class="now reveal"><b>Now</b> Robocor 2.0 is in production at Nimnicht Chevrolet. Solla Code ships nightly. I am looking for a remote senior or lead role in the US.<span class="live" id="live"></span></p>
         </div>
       </div>
     </section>
@@ -101,13 +101,13 @@
           <p class="case-meta"><span>Robocor</span><span>Lead Software Engineer</span><span>2024 to present</span><span><a href="https://github.com/sollaholla/robocor-releases" target="_blank" rel="noopener">Windows installer</a></span></p>
           <div class="case-body">
             <h3>Robocor 2.0, the software on Robocor's security robots</h3>
-            <p>Robocor builds autonomous security robots. I wrote Robocor 2.0, the software that runs them. One Flutter codebase for the operator app on iOS, Android, macOS, Windows, Linux and the web. Perception and navigation on NVIDIA Jetson. A cloud backend for fleets and telemetry. The Guardian robot patrols Nimnicht Chevrolet on this stack. I report to the founder and work with the hardware and firmware team; the operators at the dealership are the users.</p>
+            <p>Robocor builds autonomous security robots. I wrote Robocor 2.0, the software that runs them. One Flutter codebase for the operator app on iOS, Android, macOS, Windows, Linux and the web. Perception and navigation on NVIDIA Jetson. A cloud backend for fleets and telemetry. The Guardian robot patrols Nimnicht Chevrolet on this stack. I report to the founder and work with the hardware and firmware team. The operators at the dealership are the users.</p>
             <ul class="case-list">
               <li>Everything from the firmware serial protocol and motor watchdog to the cloud backend and operator UI is mine.</li>
-              <li>On-device perception: YOLO26 and YOLO-World detection, metric depth and segmentation models, running through ONNX Runtime, TFLite and TensorRT on Jetson with a ZED stereo camera. I maintain the Flutter ONNX Runtime plugin it uses.</li>
-              <li>GNSS/RTK path following. Mapping and navigation work offline when the network drops.</li>
+              <li>On-device perception with a ZED stereo camera. YOLO26 and YOLO-World for detection, plus metric depth and segmentation models. They run through ONNX Runtime, TFLite and TensorRT on Jetson. I maintain the Flutter ONNX Runtime plugin it uses.</li>
+              <li>GNSS/RTK path following, with mapping and navigation that keep working offline when the network drops.</li>
               <li>An OpenAI GPT-4o operator agent with realtime voice, so staff can talk to the robot.</li>
-              <li>corBench, a WebGPU and Rapier physics test bench. Virtual sensor boards feed the real parsers, unchanged. 580+ recorded runs. The docking suite keeps eight saved scenarios as regression tests and sweeps each from 27 start poses; as of late October, 212 of 216 starts dock, and the fast mode agrees with the rendered simulator within about 2 percent on distance and 1 degree on bearing.</li>
+              <li>corBench, a WebGPU and Rapier physics test bench. Virtual sensor boards feed the real parsers, unchanged. 580+ recorded runs. The docking suite keeps eight saved scenarios as regression tests. Each one runs from 27 start poses. As of late October, 212 of 216 starts dock. The fast mode agrees with the rendered simulator within about 2 percent on distance and 1 degree on bearing.</li>
               <li>Infrastructure: Supabase (Postgres, auth, storage), multi-tenant workers on Fly.io, Docker, CI, release pipelines for Windows, macOS and Jetson.</li>
             </ul>
             <p class="stack"><b>Stack</b> Flutter and Dart, Python, NVIDIA Jetson, ONNX Runtime, TensorRT, YOLO26, YOLO-World, ZED stereo, GNSS/RTK, Supabase, Fly.io, OpenAI realtime, Rapier, WebGPU.</p>
@@ -121,11 +121,11 @@
           <p class="case-meta"><span>VEERA Medical</span><span>Software Developer III</span><span>2021 to present</span><span><a href="https://app.recovr360.com" target="_blank" rel="noopener">app.recovr360.com</a></span></p>
           <div class="case-body">
             <h3>MedXR (Recovr360): physical therapy on Meta Quest, run by the practitioner from a browser</h3>
-            <p>A white-label physical-therapy platform. The patient wears a Quest headset. The practitioner watches, adjusts and records from a browser. I built and launched it alone, backend to headset, working with the clinicians who use it. It is in more than 15 clinics. At ACRM 2023 a clinician ran a session on it wirelessly, on stage.</p>
+            <p>A white-label physical-therapy platform. The patient wears a Quest headset. The practitioner watches, adjusts and records from a browser. I built and launched it alone, backend to headset. The clinicians who use it shaped it. It is in more than 15 clinics. At ACRM 2023 a clinician ran a session on it wirelessly, on stage.</p>
             <ul class="case-list">
-              <li>Node and TypeScript backend: server-authoritative Colyseus rooms with a strict session lifecycle, device-code pairing between headset and practitioner, Express APIs.</li>
+              <li>Node and TypeScript backend. Colyseus rooms hold the session state on the server, with a strict lifecycle. Headset and practitioner pair with a device code. Express for the APIs.</li>
               <li>Svelte and Three.js WebXR client, Unity scene exporter and native Quest client, all on one session model.</li>
-              <li>Moved the platform from Fly.io to AWS ECS Fargate behind an ALB, Cloudflare in front, Auth0 login rolled out behind feature flags.</li>
+              <li>Moved the platform from Fly.io to AWS ECS Fargate behind an ALB, with Cloudflare in front. Rolled out Auth0 login behind feature flags.</li>
               <li>Patient input from Xbox Adaptive Controller, wheelchair joystick adapters and standard gamepads.</li>
               <li>Joined as the company's first developer in 2021. Wrote the original application in C#, Unity and ASP.NET Core on the Reach Cloud codebase.</li>
             </ul>
@@ -140,12 +140,12 @@
           <p class="case-meta"><span>Solla Code</span><span>Maintainer</span><span>2026 to present</span><span><a href="https://t3.codes" target="_blank" rel="noopener">t3.codes</a></span><span><a href="https://github.com/sollaholla/sollacode/releases" target="_blank" rel="noopener">Releases</a></span></p>
           <div class="case-body">
             <h3>Solla Code, a fork of T3 Code for running several AI coding agents at once</h3>
-            <p>I run several coding agents at once and the terminal was a bad way to do it. Solla Code is my fork of T3 Code, extended into a desktop, web and mobile app: many agents and providers side by side, MCP tools, scheduled tasks, approval gating, and a browser the agents can drive. Upstream T3 Code is the editor and chat client; my delta is the orchestrator, the scheduler, the approval gates and the shared browser. 850+ commits of mine since July 2026. Nightly prereleases, tagged stable releases.</p>
+            <p>I run several coding agents at once and the terminal was a bad way to do it. Solla Code is my fork of T3 Code, extended into a desktop, web and mobile app. It runs many agents and providers side by side. It adds MCP tools, scheduled tasks, approval gating, and a browser the agents can drive. Upstream T3 Code is the editor and chat client. What I added is the orchestrator, the scheduler, the approval gates and the shared browser. I have put 850+ commits into it since July 2026, and it ships nightly prereleases and tagged stable releases.</p>
             <ul class="case-list">
-              <li>Extended the upstream Electron, web and Expo mobile clients with an orchestrator, a persistence layer and realtime state shared across all three.</li>
+              <li>Extended the upstream Electron, web and Expo mobile clients with an orchestrator and a persistence layer. All three share realtime state.</li>
               <li>Orchestration across Claude, Codex and Gemini, with durable task scheduling, delegated work, approval gates and usage guards.</li>
-              <li>Browser tabs shared between the agents and the person, so a human can take over a login or a form mid-task.</li>
-              <li>This is also how I work now: I write the specs, data model and acceptance tests, direct the agents, review every diff, and run changes through the test suites and CI before release.</li>
+              <li>Browser tabs shared between the agents and the person. A human can take over a login or a form mid-task.</li>
+              <li>This is also how I work now. I write the specs, the data model and the acceptance tests. I direct the agents and review every diff. Every change runs through the test suites and CI before release.</li>
             </ul>
             <p class="stack"><b>Stack</b> TypeScript, Electron, React, Node.js, Expo, MCP, Claude, Codex, Gemini, WebSockets.</p>
           </div>
@@ -175,7 +175,7 @@
         <div class="section-head reveal">
           <p class="kicker">Open source</p>
           <h2 id="oss-title">Public repositories</h2>
-          <p class="section-intro">The platforms above are in private repos. These two are public, from <a href="https://github.com/sollaholla" target="_blank" rel="noopener">github.com/sollaholla</a>. Stars and dates come from the GitHub API.</p>
+          <p class="section-intro">The platforms above are in private repos. These two are public on <a href="https://github.com/sollaholla" target="_blank" rel="noopener">github.com/sollaholla</a>, and the stars and dates come from the GitHub API.</p>
         </div>
         <div class="repos reveal" id="repos" aria-live="polite"></div>
         <p class="older reveal">Older Unity and GTA V modding work, 2017 to 2020, is <a href="https://github.com/sollaholla?tab=repositories&sort=stargazers" target="_blank" rel="noopener">on GitHub</a>.</p>
@@ -187,13 +187,13 @@
         <div>
           <div class="section-head reveal">
             <p class="kicker">Experience</p>
-            <h2 id="exp-title">Seven years, four companies</h2>
+            <h2 id="exp-title">Where I have worked</h2>
           </div>
           <ol class="timeline reveal">
             <li>
               <span class="tl-when">2024 to present</span>
               <div><strong>Robocor</strong> <span class="tl-role">Lead Software Engineer, remote</span>
-              <p>Only software engineer. Robocor 2.0: operator app on six OSes, Jetson perception stack, cloud backend, release pipelines.</p></div>
+              <p>The only software engineer. I built Robocor 2.0: the operator app, the Jetson perception stack, the cloud backend and the release pipelines.</p></div>
             </li>
             <li>
               <span class="tl-when">2022 to present</span>
@@ -203,12 +203,12 @@
             <li>
               <span class="tl-when">2021 to present</span>
               <div><strong>VEERA Medical</strong> <span class="tl-role">Software Developer II, then III</span>
-              <p>First developer at the company. Built MedXR (Recovr360) from the first commit. Now in 15+ clinics.</p></div>
+              <p>The first developer at the company. I built MedXR (Recovr360) from the first commit, and it is now in 15+ clinics.</p></div>
             </li>
             <li>
               <span class="tl-when">2019 to 2023</span>
               <div><strong>Cardno</strong> <span class="tl-role">Junior Software Application Programmer, part-time</span>
-              <p>Georgia Department of Transportation permit system in C# and SQL: batch reporting, Hangfire background jobs, performance work.</p></div>
+              <p>Worked on the Georgia DOT permit system in C# and SQL. Batch reporting, Hangfire background jobs and performance work.</p></div>
             </li>
             <li>
               <span class="tl-when">2016 to 2017</span>
@@ -233,8 +233,8 @@
       <div class="wrap contact-inner">
         <p class="kicker reveal">Contact</p>
         <div class="reveal">
-          <h2 id="contact-title">Looking for a remote senior or lead role, US.</h2>
-          <p>.NET, TypeScript, Flutter or Unity. Robotics, health tech, developer tools or SaaS. Technical screens and take-homes are fine.</p>
+          <h2 id="contact-title">I am looking for a remote senior or lead role in the US.</h2>
+          <p>I work in .NET, TypeScript, Flutter or Unity, on robotics, health tech, developer tools or SaaS. Technical screens and take-homes are fine.</p>
           <a class="email" href="mailto:sxnorthrop15@gmail.com">sxnorthrop15@gmail.com</a>
           <p class="links">
             <button type="button" id="copy-email" data-email="sxnorthrop15@gmail.com">Copy email</button>
@@ -248,7 +248,7 @@
 
   <footer class="footer">
     <div class="wrap footer-inner">
-      <p>&copy; <span id="year">2026</span> Soloman Northrop. Updated November 2026. Plain HTML, CSS and JavaScript. <a href="https://github.com/sollaholla/sollaholla.github.io" target="_blank" rel="noopener">Source</a>.</p>
+      <p>&copy; <span id="year">2026</span> Soloman Northrop. Updated November 2026. Written in plain HTML, CSS and JavaScript. <a href="https://github.com/sollaholla/sollaholla.github.io" target="_blank" rel="noopener">Source</a>.</p>
       <p><a href="solla-productions/">Solla Productions</a>, my Unity Asset Store publisher page.</p>
     </div>
   </footer>
