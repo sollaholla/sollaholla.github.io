@@ -210,7 +210,6 @@
   /* GitHub repos and the live line */
   const REPOS = [
     { name: 'sollacode', desc: 'Fork of T3 Code for running several AI coding agents, extended with orchestration, MCP, scheduling and a shared browser.', lang: 'TypeScript', stars: 1, url: 'https://github.com/sollaholla/sollacode' },
-    { name: 'genedit-pro', desc: 'AI video editor that runs in the browser on ffmpeg.wasm. Playwright tests.', lang: 'TypeScript', stars: 1, url: 'https://github.com/sollaholla/genedit-pro' },
   ];
   const repoBox = doc.getElementById('repos');
   const card = (r) => {
@@ -226,7 +225,7 @@
   const paintLive = (s) => { if (live && s) live.textContent = s; };
   if (repoBox) {
     paint(REPOS);
-    const cacheKey = 'gh-repos-v3';
+    const cacheKey = 'gh-repos-v4';
     const cached = (() => { try { return JSON.parse(sessionStorage.getItem(cacheKey) || 'null'); } catch { return null; } })();
     if (cached) { paint(cached.repos); paintLive(cached.live); }
     else {
