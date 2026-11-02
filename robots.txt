@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sollaholla.github.io/sitemap.xml
