@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Soloman Northrop | Lead Software Engineer</title>
-  <meta name="description" content="Soloman Northrop, lead software engineer, St. Petersburg, Florida, remote. Wrote the control software on Robocor's security robots, the MedXR physical therapy platform used in 15+ clinics, the Reach Cloud platform, and Solla Code, a fork of T3 Code for running AI coding agents.">
+  <meta name="description" content="Soloman Northrop, lead software engineer, St. Petersburg, Florida, remote. He wrote the software on Robocor's security robots and the MedXR physical therapy platform, and he maintains Solla Code, a fork of T3 Code.">
   <meta name="author" content="Soloman Northrop">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#f4f1ea" media="(prefers-color-scheme: light)">
@@ -17,13 +17,13 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sollaholla.github.io/">
   <meta property="og:title" content="Soloman Northrop | Lead Software Engineer">
-  <meta property="og:description" content="Software engineer, St. Petersburg, Florida, remote. Robocor security robot control software, MedXR physical therapy on Meta Quest, Reach Cloud, Solla Code.">
+  <meta property="og:description" content="Soloman Northrop, software engineer in St. Petersburg, Florida. He wrote the software on Robocor's security robots and the MedXR physical therapy platform.">
   <meta property="og:image" content="https://sollaholla.github.io/assets/og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Soloman Northrop | Lead Software Engineer">
-  <meta name="twitter:description" content="Software engineer, St. Petersburg, Florida, remote. Robocor security robot control software, MedXR physical therapy on Meta Quest, Reach Cloud, Solla Code.">
+  <meta name="twitter:description" content="Soloman Northrop, software engineer in St. Petersburg, Florida. He wrote the software on Robocor's security robots and the MedXR physical therapy platform.">
   <meta name="twitter:image" content="https://sollaholla.github.io/assets/og.png">
 
   <script>try{var t=new URLSearchParams(location.search).get("theme")||localStorage.getItem("theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.dataset.theme=t;}catch(e){}</script>
@@ -77,15 +77,15 @@
       <div class="wrap hero-inner">
         <p class="margin-note reveal"><span class="monogram" aria-hidden="true">S.N.</span><span>Soloman Northrop</span><span>Lead Software Engineer</span><span>St. Petersburg, Florida</span><span>Remote</span></p>
         <div class="hero-copy">
-          <h1 id="hero-title" class="reveal">Software I wrote patrols a car dealership, runs physical therapy on Meta Quest, and drives AI coding agents.</h1>
-          <p class="lede reveal">I have been a software engineer for seven years, the only one at Robocor and the first at VEERA Medical. Robocor 2.0 is on the Guardian robot patrolling Nimnicht Chevrolet. MedXR is in 15+ clinics on Meta Quest. Solla Code is my fork of T3 Code for running several coding agents at once.</p>
+          <h1 id="hero-title" class="reveal">Software I wrote runs security robots at a car dealership and physical therapy on Meta Quest.</h1>
+          <p class="lede reveal">I have been a software engineer for seven years. I am the only software engineer at Robocor and the only developer on MedXR. I also maintain Solla Code, a fork of T3 Code for running several coding agents at once.</p>
           <p class="links reveal">
             <a class="primary" href="resume/Soloman_Northrop_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
             <a href="https://github.com/sollaholla" target="_blank" rel="noopener">GitHub</a>
             <a href="https://www.linkedin.com/in/soloman-northrop-376420129" target="_blank" rel="noopener">LinkedIn</a>
             <a href="#work">Work</a>
           </p>
-          <p class="now reveal"><b>Now</b> Robocor 2.0 is in production at Nimnicht Chevrolet. Solla Code ships nightly. I am looking for a remote senior or lead role in the US.<span class="live" id="live"></span></p>
+          <p class="now reveal"><b>Now</b> Robocor 2.0 is in production at Nimnicht Chevrolet. Solla Code ships nightly.<span class="live" id="live"></span></p>
         </div>
       </div>
     </section>
@@ -94,23 +94,21 @@
       <div class="wrap">
         <div class="section-head reveal">
           <p class="kicker">Work</p>
-          <h2 id="work-title">Three systems I wrote and still run</h2>
+          <h2 id="work-title">What I work on</h2>
         </div>
 
         <article class="case reveal" id="robocor">
-          <p class="case-meta"><span>Robocor</span><span>Lead Software Engineer</span><span>2024 to present</span><span><a href="https://github.com/sollaholla/robocor-releases" target="_blank" rel="noopener">Windows installer</a></span></p>
+          <p class="case-meta"><span>Robocor</span><span>Lead Software Engineer</span><span>2024 to present</span></p>
           <div class="case-body">
             <h3>Robocor 2.0, the software on Robocor's security robots</h3>
-            <p>Robocor builds autonomous security robots. I wrote Robocor 2.0, the software that runs them. One Flutter codebase for the operator app on iOS, Android, macOS, Windows, Linux and the web. Perception and navigation on NVIDIA Jetson. A cloud backend for fleets and telemetry. The Guardian robot patrols Nimnicht Chevrolet on this stack. I report to the founder and work with the hardware and firmware team. The operators at the dealership are the users.</p>
+            <p>Robocor builds security robots. I am the only software engineer there. I built Robocor 2.0, the software that runs the robots. The Guardian robot runs it at Nimnicht Chevrolet.</p>
             <ul class="case-list">
-              <li>Everything from the firmware serial protocol and motor watchdog to the cloud backend and operator UI is mine.</li>
-              <li>On-device perception with a ZED stereo camera. YOLO26 and YOLO-World for detection, plus metric depth and segmentation models. They run through ONNX Runtime, TFLite and TensorRT on Jetson. I maintain the Flutter ONNX Runtime plugin it uses.</li>
-              <li>GNSS/RTK path following, with mapping and navigation that keep working offline when the network drops.</li>
-              <li>An OpenAI GPT-4o operator agent with realtime voice, so staff can talk to the robot.</li>
-              <li>corBench, a WebGPU and Rapier physics test bench. Virtual sensor boards feed the real parsers, unchanged. 580+ recorded runs. The docking suite keeps eight saved scenarios as regression tests. Each one runs from 27 start poses. As of late October, 212 of 216 starts dock. The fast mode agrees with the rendered simulator within about 2 percent on distance and 1 degree on bearing.</li>
-              <li>Infrastructure: Supabase (Postgres, auth, storage), multi-tenant workers on Fly.io, Docker, CI, release pipelines for Windows, macOS and Jetson.</li>
+              <li>I wrote the whole stack, from the firmware link up to the operator app and the cloud.</li>
+              <li>The robot does its computer vision on board, so it can detect objects and judge distance without a cloud service.</li>
+              <li>Staff can talk to the robot through a voice agent I built on OpenAI.</li>
+              <li>I built corBench, a simulator that runs the real robot code before it goes on hardware. It has logged 580+ runs.</li>
             </ul>
-            <p class="stack"><b>Stack</b> Flutter and Dart, Python, NVIDIA Jetson, ONNX Runtime, TensorRT, YOLO26, YOLO-World, ZED stereo, GNSS/RTK, Supabase, Fly.io, OpenAI realtime, Rapier, WebGPU.</p>
+            <p class="stack"><b>Stack</b> Flutter, Python, NVIDIA Jetson, Supabase, Fly.io.</p>
           </div>
           <figure class="case-figure" data-diagram="robocor">
             <figcaption>System layout, Robocor 2.0</figcaption>
@@ -120,16 +118,15 @@
         <article class="case reveal" id="medxr">
           <p class="case-meta"><span>VEERA Medical</span><span>Software Developer III</span><span>2021 to present</span><span><a href="https://app.recovr360.com" target="_blank" rel="noopener">app.recovr360.com</a></span></p>
           <div class="case-body">
-            <h3>MedXR (Recovr360): physical therapy on Meta Quest, run by the practitioner from a browser</h3>
-            <p>A white-label physical-therapy platform. The patient wears a Quest headset. The practitioner watches, adjusts and records from a browser. I built and launched it alone, backend to headset. The clinicians who use it shaped it. It is in more than 15 clinics. At ACRM 2023 a clinician ran a session on it wirelessly, on stage.</p>
+            <h3>MedXR (Recovr360), physical therapy on Meta Quest</h3>
+            <p>The patient wears a Quest headset and the practitioner runs the session from a browser. I built and launched it alone, and it is now in more than 15 clinics. I presented the platform live at ACRM 2023, where a clinician ran the demo.</p>
             <ul class="case-list">
-              <li>Node and TypeScript backend. Colyseus rooms hold the session state on the server, with a strict lifecycle. Headset and practitioner pair with a device code. Express for the APIs.</li>
-              <li>Svelte and Three.js WebXR client, Unity scene exporter and native Quest client, all on one session model.</li>
-              <li>Moved the platform from Fly.io to AWS ECS Fargate behind an ALB, with Cloudflare in front. Rolled out Auth0 login behind feature flags.</li>
-              <li>Patient input from Xbox Adaptive Controller, wheelchair joystick adapters and standard gamepads.</li>
-              <li>Joined as the company's first developer in 2021. Wrote the original application in C#, Unity and ASP.NET Core on the Reach Cloud codebase.</li>
+              <li>I wrote the real-time backend, the WebXR client and the native Quest client.</li>
+              <li>I moved the platform from Fly.io to AWS and rolled out Auth0 login behind feature flags.</li>
+              <li>It works with the Xbox Adaptive Controller and wheelchair joysticks, so more patients can use it.</li>
+              <li>Before MedXR, I wrote the company's first application in C#, Unity and ASP.NET Core.</li>
             </ul>
-            <p class="stack"><b>Stack</b> TypeScript, Node, Colyseus, Express, Svelte, Three.js, WebXR, Unity, Meta Quest, AWS ECS Fargate, Auth0, Cloudflare, C# and ASP.NET Core.</p>
+            <p class="stack"><b>Stack</b> TypeScript, Node, Colyseus, Svelte, Three.js, Unity, AWS.</p>
           </div>
           <figure class="case-figure" data-diagram="medxr">
             <figcaption>Session flow, MedXR</figcaption>
@@ -137,17 +134,16 @@
         </article>
 
         <article class="case reveal" id="sollacode">
-          <p class="case-meta"><span>Solla Code</span><span>Maintainer</span><span>2026 to present</span><span><a href="https://t3.codes" target="_blank" rel="noopener">t3.codes</a></span><span><a href="https://github.com/sollaholla/sollacode/releases" target="_blank" rel="noopener">Releases</a></span></p>
+          <p class="case-meta"><span>Solla Code</span><span>Maintainer</span><span>2026 to present</span><span><a href="https://github.com/sollaholla/sollacode" target="_blank" rel="noopener">GitHub</a></span><span><a href="https://github.com/sollaholla/sollacode/releases" target="_blank" rel="noopener">Releases</a></span></p>
           <div class="case-body">
-            <h3>Solla Code, a fork of T3 Code for running several AI coding agents at once</h3>
-            <p>I run several coding agents at once and the terminal was a bad way to do it. Solla Code is my fork of T3 Code, extended into a desktop, web and mobile app. It runs many agents and providers side by side. It adds MCP tools, scheduled tasks, approval gating, and a browser the agents can drive. Upstream T3 Code is the editor and chat client. What I added is the orchestrator, the scheduler, the approval gates and the shared browser. I have put 850+ commits into it since July 2026, and it ships nightly prereleases and tagged stable releases.</p>
+            <h3>Solla Code, a fork of T3 Code for running several AI coding agents</h3>
+            <p>I run several coding agents at once and the terminal was a bad way to do it. So I forked T3 Code and built on it. I have made 850+ commits since July 2026, and it ships nightly builds.</p>
             <ul class="case-list">
-              <li>Extended the upstream Electron, web and Expo mobile clients with an orchestrator and a persistence layer. All three share realtime state.</li>
-              <li>Orchestration across Claude, Codex and Gemini, with durable task scheduling, delegated work, approval gates and usage guards.</li>
-              <li>Browser tabs shared between the agents and the person. A human can take over a login or a form mid-task.</li>
-              <li>This is also how I work now. I write the specs, the data model and the acceptance tests. I direct the agents and review every diff. Every change runs through the test suites and CI before release.</li>
+              <li>I added custom agents, scheduled tasks, side chats and an orchestrator.</li>
+              <li>I grew its MCP tools and the browser that agents and people share, so a person can take over a login mid-task.</li>
+              <li>This is how I work now. I direct coding agents day to day, and changes go through tests and CI before release.</li>
             </ul>
-            <p class="stack"><b>Stack</b> TypeScript, Electron, React, Node.js, Expo, MCP, Claude, Codex, Gemini, WebSockets.</p>
+            <p class="stack"><b>Stack</b> TypeScript, Electron, React, Node.js, Expo, MCP.</p>
           </div>
           <figure class="case-figure" data-diagram="sollacode">
             <figcaption>Architecture, Solla Code</figcaption>
@@ -158,9 +154,9 @@
           <p class="kicker">Also</p>
           <dl class="also-list">
             <dt><a href="https://reachcloud.org" target="_blank" rel="noopener">Reach Cloud</a></dt>
-            <dd>Co-founded in 2022. Multi-tenant streaming, remote device management and shared VR, AR and MR sessions through a Unity SDK and a public API. I built the platform and wrote the docs and the C# generator that builds them from the code.</dd>
+            <dd>I co-founded Reach Cloud in 2022 and built the platform. It gives developers streaming, device management and shared VR sessions through a Unity SDK and a public API.</dd>
             <dt><a href="https://skycalapp.com" target="_blank" rel="noopener">SkyCal</a></dt>
-            <dd>Family calendar and planning app. React, TypeScript and Vite on Supabase. Stripe household billing, Google and Outlook calendar sync, a GPT realtime voice assistant. 50+ test files including Stripe sandbox tests.</dd>
+            <dd>SkyCal is a family calendar app I built in React and TypeScript on Supabase. It has Stripe billing, Google and Outlook sync, and a voice assistant.</dd>
           </dl>
         </div>
       </div>
@@ -170,8 +166,8 @@
       <div class="wrap">
         <div class="section-head reveal">
           <p class="kicker">Open source</p>
-          <h2 id="oss-title">Public repositories</h2>
-          <p class="section-intro">The platforms above are in private repos. Solla Code is public on <a href="https://github.com/sollaholla" target="_blank" rel="noopener">github.com/sollaholla</a>, and its stars and dates come from the GitHub API.</p>
+          <h2 id="oss-title">Public code</h2>
+          <p class="section-intro">The platforms above are in private repos. Solla Code is public on <a href="https://github.com/sollaholla" target="_blank" rel="noopener">my GitHub</a>.</p>
         </div>
         <div class="repos reveal" id="repos" aria-live="polite"></div>
         <p class="older reveal">Older Unity and GTA V modding work, 2017 to 2020, is <a href="https://github.com/sollaholla?tab=repositories&sort=stargazers" target="_blank" rel="noopener">on GitHub</a>.</p>
@@ -189,7 +185,7 @@
             <li>
               <span class="tl-when">2024 to present</span>
               <div><strong>Robocor</strong> <span class="tl-role">Lead Software Engineer, remote</span>
-              <p>The only software engineer. I built Robocor 2.0: the operator app, the Jetson perception stack, the cloud backend and the release pipelines.</p></div>
+              <p>I am the only software engineer. I built Robocor 2.0, the software that runs the robots.</p></div>
             </li>
             <li>
               <span class="tl-when">2022 to present</span>
@@ -199,12 +195,12 @@
             <li>
               <span class="tl-when">2021 to present</span>
               <div><strong>VEERA Medical</strong> <span class="tl-role">Software Developer II, then III</span>
-              <p>The first developer at the company. I built MedXR (Recovr360) from the first commit, and it is now in 15+ clinics.</p></div>
+              <p>I wrote the company's first application, then built MedXR (Recovr360), which is now in 15+ clinics.</p></div>
             </li>
             <li>
               <span class="tl-when">2019 to 2023</span>
-              <div><strong>Cardno</strong> <span class="tl-role">Junior Software Application Programmer, part-time</span>
-              <p>Worked on the Georgia DOT permit system in C# and SQL. Batch reporting, Hangfire background jobs and performance work.</p></div>
+              <div><strong>Cardno</strong> <span class="tl-role">Junior Software Application Programmer</span>
+              <p>Started part-time out of college, then full-time. Worked on the Georgia DOT permit system in C# and SQL. Batch reporting, Hangfire background jobs and performance work.</p></div>
             </li>
             <li>
               <span class="tl-when">2016 to 2017</span>
@@ -229,8 +225,7 @@
       <div class="wrap contact-inner">
         <p class="kicker reveal">Contact</p>
         <div class="reveal">
-          <h2 id="contact-title">I am looking for a remote senior or lead role in the US.</h2>
-          <p>I work in .NET, TypeScript, Flutter or Unity, on robotics, health tech, developer tools or SaaS. Technical screens and take-homes are fine.</p>
+          <h2 id="contact-title">Email is the best way to reach me.</h2>
           <a class="email" href="mailto:sxnorthrop15@gmail.com">sxnorthrop15@gmail.com</a>
           <p class="links">
             <button type="button" id="copy-email" data-email="sxnorthrop15@gmail.com">Copy email</button>

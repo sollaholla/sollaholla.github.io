@@ -59,14 +59,14 @@
         { x: 360, y: 10, w: 150, label: 'Cloud' },
       ],
       nodes: [
-        { id: 'fw', x: 25, y: 40, w: 130, label: 'Firmware', sub: 'serial protocol, motor watchdog' },
-        { id: 'jet', x: 25, y: 120, w: 130, label: 'Jetson', sub: 'ZED, YOLO, depth, ONNX, TensorRT', hi: true },
-        { id: 'sim', x: 25, y: 200, w: 130, label: 'corBench', sub: 'WebGPU and Rapier test bench' },
-        { id: 'app', x: 205, y: 40, w: 120, label: 'Flutter app', sub: 'six platforms, one codebase', hi: true },
-        { id: 'llm', x: 205, y: 200, w: 120, label: 'LLM operator', sub: 'GPT-4o, realtime voice' },
-        { id: 'db', x: 375, y: 40, w: 120, label: 'Supabase', sub: 'Postgres, auth, storage' },
-        { id: 'wk', x: 375, y: 120, w: 120, label: 'Fly.io workers', sub: 'multi-tenant, Docker' },
-        { id: 'ci', x: 375, y: 200, w: 120, label: 'CI and releases', sub: 'Windows, macOS, Jetson' },
+        { id: 'fw', x: 25, y: 40, w: 130, label: 'Firmware', sub: 'motor control' },
+        { id: 'jet', x: 25, y: 120, w: 130, label: 'Jetson', sub: 'vision and navigation', hi: true },
+        { id: 'sim', x: 25, y: 200, w: 130, label: 'corBench', sub: 'simulator' },
+        { id: 'app', x: 205, y: 40, w: 120, label: 'Flutter app', sub: 'desktop, mobile, web', hi: true },
+        { id: 'llm', x: 205, y: 200, w: 120, label: 'Voice agent', sub: 'OpenAI' },
+        { id: 'db', x: 375, y: 40, w: 120, label: 'Supabase', sub: 'data and login' },
+        { id: 'wk', x: 375, y: 120, w: 120, label: 'Fly.io workers', sub: 'background services' },
+        { id: 'ci', x: 375, y: 200, w: 120, label: 'CI and releases', sub: 'automated builds' },
       ],
       edges: [
         ['fw', 'jet'], ['jet', 'app', true], ['sim', 'jet', false, true], ['app', 'llm'], ['app', 'db', true], ['db', 'wk'], ['wk', 'jet', false, true], ['ci', 'app'],
@@ -94,18 +94,18 @@
     sollacode: {
       w: 520, h: 300,
       groups: [
-        { x: 10, y: 10, w: 150, label: 'Clients, upstream' },
-        { x: 185, y: 10, w: 150, label: 'Core, my delta' },
+        { x: 10, y: 10, w: 150, label: 'Clients' },
+        { x: 185, y: 10, w: 150, label: 'Core' },
         { x: 360, y: 10, w: 150, label: 'Agents and tools' },
       ],
       nodes: [
         { id: 'desk', x: 25, y: 40, w: 120, label: 'Electron desktop', sub: 'macOS, Windows' },
         { id: 'web', x: 25, y: 120, w: 120, label: 'Web', sub: 'React' },
         { id: 'mob', x: 25, y: 200, w: 120, label: 'Mobile', sub: 'Expo, remote control' },
-        { id: 'orch', x: 200, y: 60, w: 120, label: 'Orchestrator', sub: 'multi-agent, approvals, state', hi: true },
-        { id: 'sched', x: 200, y: 180, w: 120, label: 'Scheduler', sub: 'durable autonomous tasks' },
+        { id: 'orch', x: 200, y: 60, w: 120, label: 'Orchestrator', sub: 'runs many agents', hi: true },
+        { id: 'sched', x: 200, y: 180, w: 120, label: 'Scheduler', sub: 'scheduled tasks' },
         { id: 'prov', x: 375, y: 40, w: 120, label: 'Providers', sub: 'Claude, Codex, Gemini', hi: true },
-        { id: 'mcp', x: 375, y: 120, w: 120, label: 'MCP tools', sub: 'credential-bound' },
+        { id: 'mcp', x: 375, y: 120, w: 120, label: 'MCP tools', sub: 'agent tools' },
         { id: 'brw', x: 375, y: 200, w: 120, label: 'Shared browser', sub: 'human can take over' },
       ],
       edges: [
@@ -168,7 +168,7 @@
       svg.appendChild(grp);
     }
     for (const n of d.nodes) {
-      n.lines = n.sub ? wrap(n.sub, Math.floor((n.w - 20) / 5.9)) : [];
+      n.lines = n.sub ? wrap(n.sub, Math.floor((n.w - 20) / (narrow ? 6.6 : 5.9))) : [];
       n.h = n.lines.length > 1 ? 58 : 46;
     }
     const byId = Object.fromEntries(d.nodes.map((n) => [n.id, n]));
@@ -209,7 +209,7 @@
 
   /* GitHub repos and the live line */
   const REPOS = [
-    { name: 'sollacode', desc: 'Fork of T3 Code for running several AI coding agents, extended with orchestration, MCP, scheduling and a shared browser.', lang: 'TypeScript', stars: 1, url: 'https://github.com/sollaholla/sollacode' },
+    { name: 'sollacode', desc: 'My fork of T3 Code for running several AI coding agents.', lang: 'TypeScript', stars: 1, url: 'https://github.com/sollaholla/sollacode' },
   ];
   const repoBox = doc.getElementById('repos');
   const card = (r) => {
@@ -225,7 +225,7 @@
   const paintLive = (s) => { if (live && s) live.textContent = s; };
   if (repoBox) {
     paint(REPOS);
-    const cacheKey = 'gh-repos-v4';
+    const cacheKey = 'gh-repos-v5';
     const cached = (() => { try { return JSON.parse(sessionStorage.getItem(cacheKey) || 'null'); } catch { return null; } })();
     if (cached) { paint(cached.repos); paintLive(cached.live); }
     else {
